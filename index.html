@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro ASCII Animation</title>
+    <style>
+        body {
+            background-color: black;
+            color: #0f0; /* green */
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        #ascii-art {
+            font-size: 16px;
+            line-height: 1.2;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <div id="ascii-art"></div>
+
+    <script>
+        const fullArt = `  CCCC   OOOO   DDDD   EEEEE  SSSSS  TTTTT  RRRR   AAA    L
+ C        O    O    D   E    S      T        R   A   A   L
+ C        O    O    D   EEEEE  SSSSS  T        RRRRR   AAAAA  L
+ C        O    O    D   E          S  T        R R     A   A  L
+  CCCC   OOOO   DDDD   EEEEE  SSSSS    T       R  R    A   A  LLLLL`;
+
+        const lines = fullArt.split('
+');
+        let currentLine = 0;
+        const asciiArtElement = document.getElementById('ascii-art');
+        let displayedText = '';
+
+        function updateAnimation() {
+            if (currentLine < lines.length) {
+                displayedText += (displayedText === '' ? '' : '\n') + lines[currentLine];
+                asciiArtElement.textContent = displayedText;
+                currentLine++;
+            } else {
+                // Reset animation
+                currentLine = 0;
+                displayedText = '';
+            }
+        }
+
+        setInterval(updateAnimation, 500); // Add a new line every 500ms
+    </script>
+</body>
+</html>

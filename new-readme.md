@@ -1,6 +1,28 @@
 # Mistral AI Code Assistant
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
 An intelligent AI-powered development environment that combines conversational AI with powerful development tools, Git integration, and file operations featuring advanced fuzzy matching capabilities.
+
+## Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Project Structure](#project-structure)
+- [Advanced Features](#advanced-features)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [FAQ](#faq)
+- [Troubleshooting](#troubleshooting)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Support](#support)
+- [Acknowledgments](#acknowledgments)
+- [Changelog](#changelog)
 
 ## Overview
 
@@ -10,7 +32,7 @@ Mistral AI Code Assistant is an enhanced command-line interface built on top of 
 
 ### 🤖 **AI-Powered Development**
 - **Conversational Interface**: Interactive chat with advanced Mistral AI models
-devstral-medium-2507
+- **Dual Model Support**: Toggle between chat model (`mistral-large-2411`) and reasoning model (`magistral-medium-2506`)
 - **Function Calling**: AI can automatically execute tools and operations
 - **Streaming Responses**: Real-time AI response with rich formatting
 
@@ -60,6 +82,7 @@ devstral-medium-2507
    uv run mistral.py
    ```
    
+   Or using pip
    ```bash
    pip install -r requirements.txt
    ```
@@ -86,6 +109,16 @@ devstral-medium-2507
    python mistral.py
    ```
 
+## Quick Start
+
+To get started quickly, follow these steps:
+
+1. Clone the repository and navigate to the directory.
+2. Install dependencies using `uv` or `pip`.
+3. Set up your Mistral AI API key.
+4. Run the assistant with `python mistral.py`.
+5. Use the `/help` command to see available commands.
+
 ## Usage
 
 ### Command-Line Interface
@@ -110,14 +143,14 @@ The assistant supports both natural language conversation and special commands:
 
 #### **Example Workflows**
 
-**Adding files to context:**
+**Adding files to context**:
 ```bash
 /add src/main.py
 /add src/  # Add entire directory
 /add mai.py  # Fuzzy matching will find main.py
 ```
 
-**Git workflow:**
+**Git workflow**:
 ```bash
 /git init
 /git add .
@@ -125,7 +158,7 @@ The assistant supports both natural language conversation and special commands:
 /git branch feature/new-feature
 ```
 
-**File operations through conversation:**
+**File operations through conversation**:
 ```
 User: "Create a new Python function that calculates Fibonacci numbers"
 Assistant: [Creates the file with the function]
@@ -200,9 +233,36 @@ The assistant uses advanced fuzzy matching for:
 - `thefuzz` - Fuzzy string matching capabilities
 - `python-levenshtein` - Performance optimization for fuzzy matching
 
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## FAQ
+
+**Q: How do I reset the conversation context?**
+A: Use the `/clear-context` command.
+
+**Q: Can I use this assistant with other AI models?**
+A: Currently, it is designed for Mistral AI models, but you can modify the configuration to use other compatible models.
+
+## Troubleshooting
+
+If you encounter issues, try the following:
+- Ensure all dependencies are installed correctly.
+- Check your API key configuration.
+- Review the logs for error messages.
+- Consult the [FAQ](#faq) section.
+
+## Roadmap
+
+- [ ] Add support for more AI models
+- [ ] Enhance fuzzy matching algorithms
+- [ ] Improve Git integration features
+- [ ] Expand context management capabilities
+
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Support
 
@@ -210,6 +270,15 @@ If you encounter any issues or have questions, please:
 1. Check the `/help` command within the application
 2. Review this documentation
 3. Open an issue on the project repository
+
+## Acknowledgments
+
+- Thanks to all contributors and users for their support and feedback.
+- Special thanks to the Mistral AI team for their powerful models.
+
+## Changelog
+
+For a detailed list of changes, please see the [Changelog](CHANGELOG.md).
 
 ---
 
