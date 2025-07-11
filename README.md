@@ -145,7 +145,7 @@ The assistant can automatically execute these operations:
 ## Configuration
 
 ### Model Configuration
-- **Default Chat Model**: `mistral-large-2411`
+- **Default Chat Model**: `devstral-medium-2507`
 - **Reasoning Model**: `magistral-medium-2506`
 
 ### Fuzzy Matching Thresholds
