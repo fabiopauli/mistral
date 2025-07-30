@@ -686,8 +686,8 @@ CONTEXT_WARNING_THRESHOLD = conversation_config.get("context_warning_threshold",
 AGGRESSIVE_TRUNCATION_THRESHOLD = conversation_config.get("aggressive_truncation_threshold", 0.9)
 
 model_config = config.get("models", {})
-DEFAULT_MODEL = model_config.get("default_model", "mistral-large-2411")
-REASONER_MODEL = model_config.get("reasoner_model", "magistral-medium-2506")
+DEFAULT_MODEL = model_config.get("default_model", "devstral-medium-2507")
+REASONER_MODEL = model_config.get("reasoner_model", "magistral-medium-2507")
 
 security_config = config.get("security", {})
 DEFAULT_SECURITY_CONTEXT = {

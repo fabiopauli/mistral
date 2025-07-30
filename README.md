@@ -146,7 +146,7 @@ The assistant can automatically execute these operations:
 
 ### Model Configuration
 - **Default Chat Model**: `devstral-medium-2507`
-- **Reasoning Model**: `magistral-medium-2506`
+- **Reasoning Model**: `magistral-medium-2507`
 
 ### Fuzzy Matching Thresholds
 - **File Path Matching**: 80% similarity minimum
